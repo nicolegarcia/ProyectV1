@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import com.facebook.Profile;
 
 /**
  * Created by SG on 05-01-2016.
@@ -14,9 +17,15 @@ public class HomeActivity extends Activity{
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        TextView name = (TextView) findViewById(R.id.userName);
         setContentView(R.layout.home);
 
+        //Profile profile = Profile.getCurrentProfile();
+        //name.setText(profile.getName());
+
         irDespensa();
+
     }
 
     private void irDespensa(){

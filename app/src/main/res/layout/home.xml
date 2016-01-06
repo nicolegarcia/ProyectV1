@@ -5,6 +5,15 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondohome">>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:id="@+id/userName"
+        android:layout_marginBottom="95dp"
+        android:layout_alignBottom="@+id/btn_VerRecetas"
+        android:layout_toLeftOf="@+id/btn_VerRecetas"
+        android:layout_toStartOf="@+id/btn_VerRecetas" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
