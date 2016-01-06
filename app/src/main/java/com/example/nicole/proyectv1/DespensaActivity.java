@@ -17,7 +17,7 @@ import java.util.ArrayList;
  */
 public class DespensaActivity extends Activity {
 
-    ArrayList<String> ingredientes = new ArrayList<String>();;
+    ArrayList<String> ingredientes = new ArrayList<String>();
     ListView lv;
     Ingrediente[] modelItems;
 

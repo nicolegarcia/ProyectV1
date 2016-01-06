@@ -44,6 +44,11 @@
             android:label="Recetas">
         </activity>
 
+        <activity
+            android:name=".DetalleReceta"
+            android:label="Detalles">
+        </activity>
+
     </application>
 
 

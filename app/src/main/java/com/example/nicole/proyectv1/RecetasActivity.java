@@ -1,7 +1,10 @@
 package com.example.nicole.proyectv1;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.example.nicole.proyectv1.Recetas.Receta;
@@ -40,6 +43,7 @@ public class RecetasActivity extends Activity{
 
         RecetasAdapter adapter = new RecetasAdapter(this, modelItems);
         lv.setAdapter(adapter);
+
     }
 
 

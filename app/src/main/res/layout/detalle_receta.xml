@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/fondodespensa">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Titulo Receta"
+        android:id="@+id/txtTitle"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="74dp"
+        android:layout_marginStart="74dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:id="@+id/imageView2"
+        android:layout_marginTop="31dp"
+        android:layout_below="@+id/txtTitle"
+        android:layout_toRightOf="@+id/txtTitle"
+        android:layout_toEndOf="@+id/txtTitle" />
+
+    <ListView
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:id="@+id/lstIngredients"
+        android:layout_alignTop="@+id/imageView2"
+        android:layout_alignRight="@+id/txtTitle"
+        android:layout_alignEnd="@+id/txtTitle"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:text="Procedimiento"
+        android:id="@+id/txtProc"
+        android:layout_below="@+id/lstIngredients"
+        android:layout_alignLeft="@+id/lstIngredients"
+        android:layout_alignStart="@+id/lstIngredients"
+        android:layout_marginTop="25dp" />
+
+</RelativeLayout>
