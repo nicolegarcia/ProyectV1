@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Titulo Receta"
+        android:id="@+id/tituloReceta"
+        android:layout_alignTop="@+id/btn_VerReceta"
+        android:layout_alignLeft="@+id/descReceta"
+        android:layout_alignStart="@+id/descReceta" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descripcion"
+        android:id="@+id/descReceta"
+        android:layout_alignBottom="@+id/btn_VerReceta"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="79dp"
+        android:layout_marginStart="79dp" />
+
+    <Button
+        android:layout_width="62dp"
+        android:layout_height="wrap_content"
+        android:text="Ver"
+        android:id="@+id/btn_VerReceta"
+        android:layout_marginTop="61dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/tituloReceta" />
+
+    <ImageView
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:id="@+id/imageView"
+        android:layout_toLeftOf="@+id/tituloReceta"
+        android:layout_marginRight="10dp"
+        android:layout_alignTop="@+id/tituloReceta" />
+</RelativeLayout>

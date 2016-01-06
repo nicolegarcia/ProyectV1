@@ -25,7 +25,7 @@ public class HomeActivity extends Activity{
         //name.setText(profile.getName());
 
         irDespensa();
-
+        irRecetas();
     }
 
     private void irDespensa(){
@@ -34,6 +34,17 @@ public class HomeActivity extends Activity{
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(HomeActivity.this, DespensaActivity.class));
+
+            }
+        });
+    }
+
+    private void irRecetas(){
+        Button recetas = (Button) findViewById(R.id.btn_BuscarReceta);
+        recetas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, RecetasActivity.class));
 
             }
         });
