@@ -12,7 +12,6 @@ import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
-import com.facebook.FacebookSdk;
 import com.facebook.Profile;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
@@ -27,7 +26,7 @@ public class MainFragment extends Fragment {
     private FacebookCallback<LoginResult> mCallback = new FacebookCallback<LoginResult>() {
         @Override
         public void onSuccess(LoginResult loginResult) {
-            AccessToken accessToken = loginResult. getAccessToken();
+            AccessToken accessToken = loginResult.getAccessToken();
             Profile profile = Profile.getCurrentProfile();
             if (profile != null){
                 mTextDetails.setText("Bienvenido"+profile.getName());
@@ -54,7 +53,6 @@ public class MainFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        FacebookSdk.sdkInitialize(getActivity().getApplicationContext());
         mCallbackManager = CallbackManager.Factory.create();
     }
 
