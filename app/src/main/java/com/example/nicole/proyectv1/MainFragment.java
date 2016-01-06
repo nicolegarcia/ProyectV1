@@ -30,6 +30,7 @@ public class MainFragment extends Fragment {
             Profile profile = Profile.getCurrentProfile();
             if (profile != null){
                 mTextDetails.setText("Bienvenido"+profile.getName());
+
             }
 
         }
@@ -67,13 +68,14 @@ public class MainFragment extends Fragment {
         LoginButton loginButton = (LoginButton) view.findViewById(R.id.login_button);
         loginButton.setReadPermissions("user_friends");
         loginButton.setFragment(this);
-        loginButton.registerCallback(mCallbackManager,mCallback);
+        loginButton.registerCallback(mCallbackManager, mCallback);
     }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        mCallbackManager.onActivityResult(requestCode,resultCode,data);
+        mCallbackManager.onActivityResult(requestCode, resultCode, data);
     }
+
 
 }
