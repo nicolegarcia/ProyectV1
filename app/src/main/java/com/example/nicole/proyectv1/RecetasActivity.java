@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
@@ -16,7 +17,7 @@ import java.util.ArrayList;
  * Created by SG on 06-01-2016.
  */
 
-public class RecetasActivity extends Activity{
+public class RecetasActivity extends Activity {
     ArrayList<Receta> prueba = new ArrayList<>();;
     ListView lv;
     Receta[] modelItems;
@@ -30,6 +31,13 @@ public class RecetasActivity extends Activity{
         prueba.add(new Receta("receta4", "descripcion4"));
 
         mostrarRecetas();
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                startActivity(new Intent(RecetasActivity.this, DetalleReceta.class));
+            }
+        });
     }
 
     private void mostrarRecetas() {

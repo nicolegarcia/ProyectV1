@@ -13,6 +13,7 @@ public class Receta extends Object{
     String procedimiento;
     String urlImage;
 
+
     public String getUrlImage() {
         return urlImage;
     }

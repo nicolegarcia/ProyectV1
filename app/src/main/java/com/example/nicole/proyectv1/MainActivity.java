@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         callbackManager.onActivityResult(requestCode, resultCode, data);
     }
 
-    public void printHashKey(){
+/*    public void printHashKey(){ ------------------>//Key para funcionar facebook
         TextView algo = (TextView) findViewById(R.id.key);
 
         try{
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
         } catch (NoSuchAlgorithmException e){
 
         }
-    }
+    }*/
 
     @Override
     protected void onResume() {
