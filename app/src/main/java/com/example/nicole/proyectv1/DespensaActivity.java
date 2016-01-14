@@ -24,15 +24,15 @@ public class DespensaActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.despensa);
-        ingredientes.add("algo1");
-        ingredientes.add("algo2");
-        ingredientes.add("algo3");
-        ingredientes.add("algo4");
+
         irAddIngrediente();
         mostrarIngredientes();
     }
 
     private void irAddIngrediente(){
+
+
+
         Button agregar = (Button) findViewById(R.id.btnAdd);
         final EditText text = (EditText) findViewById(R.id.addIngText);
         agregar.setOnClickListener(new View.OnClickListener() {

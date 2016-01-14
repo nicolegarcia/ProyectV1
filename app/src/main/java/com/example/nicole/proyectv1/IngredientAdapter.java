@@ -27,7 +27,8 @@ public class IngredientAdapter extends ArrayAdapter<String> {
         this.modelItems = resource;
     }
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, ViewGroup parent)
+    {
         LayoutInflater inflater = ((Activity) context).getLayoutInflater();
         convertView = inflater.inflate(R.layout.row, parent, false);
         TextView name = (TextView) convertView.findViewById(R.id.textView1);

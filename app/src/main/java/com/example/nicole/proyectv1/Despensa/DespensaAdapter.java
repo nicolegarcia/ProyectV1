@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
+import com.example.nicole.proyectv1.DataBaseHelper;
 import com.example.nicole.proyectv1.R;
 
 
@@ -16,6 +17,8 @@ import com.example.nicole.proyectv1.R;
  * Created by SG on 05-01-2016.
  */
 public class DespensaAdapter extends ArrayAdapter<Ingrediente> {
+
+
 
     Ingrediente[] modelItems = null;
     Context context;
@@ -27,11 +30,13 @@ public class DespensaAdapter extends ArrayAdapter<Ingrediente> {
     }
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+
         LayoutInflater inflater = ((Activity) context).getLayoutInflater();
         convertView = inflater.inflate(R.layout.row, parent, false);
         TextView name = (TextView) convertView.findViewById(R.id.textView1);
         CheckBox cb = (CheckBox) convertView.findViewById(R.id.checkBox1);
         name.setText(modelItems[position].getNombre());
+
         return convertView;
     }
 }

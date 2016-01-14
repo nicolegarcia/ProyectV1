@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@drawable/icon_app"
         android:label="@string/app_name"
@@ -17,6 +18,7 @@
 
         <activity
             android:name=".MainActivity" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -28,6 +30,15 @@
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:label="@string/app_name" />
+        <activity
+            android:name=".Display_Login"
+            android:label="Login">
+        </activity>
+
+        <activity
+            android:name=".SignUp"
+            android:label="RegistroUser">
+        </activity>
 
         <activity
             android:name=".HomeActivity"

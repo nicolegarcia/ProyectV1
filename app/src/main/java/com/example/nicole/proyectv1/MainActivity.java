@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 import com.facebook.CallbackManager;
@@ -52,11 +53,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onError(FacebookException exception) {
                 // App code
-                Log.i("Error" , "Error");
+                Log.i("Error", "Error");
             }
         });
 
         //printHashKey();
+
+    }
+
+    public void onButtonClick(View v){
+
+        if (v.getId() == R.id.display_button)
+        {
+            Intent i = new Intent(MainActivity.this, Display_Login.class);
+            startActivity(i);
+
+        }
+
+
     }
 
     @Override
