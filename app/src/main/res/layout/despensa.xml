@@ -8,7 +8,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/btnAdd"
+        android:layout_below="@+id/BtnAgregar"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="60dp"
@@ -18,12 +18,10 @@
         android:id="@+id/relativeLayout2">
 
         <ListView
-            android:id="@+id/listReceta"
-            android:layout_width="match_parent"
+            android:id="@+id/ListIngrediente"
+            android:layout_width="wrap_content"
             android:layout_height="239dp"
-            android:layout_above="@+id/btnAdd"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true">
+            android:layout_above="@+id/BtnAgregar">
         </ListView>
 
         <Button
@@ -31,29 +29,29 @@
             android:layout_height="wrap_content"
             android:text="Buscar Receta"
             android:id="@+id/btn_Buscar"
-            android:layout_below="@+id/addIngText"
+            android:layout_below="@+id/agregarIngrediente"
             android:layout_centerHorizontal="true" />
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:id="@+id/addIngText"
+            android:id="@+id/agregarIngrediente"
             android:inputType="text"
             android:hint="Ingrediente"
             android:ems="10"
             android:cursorVisible="true"
             android:background="#78ffffff"
-            android:layout_alignBottom="@+id/btnAdd"
-            android:layout_toLeftOf="@+id/btnAdd"
-            android:layout_toStartOf="@+id/btnAdd" />
+            android:layout_alignBottom="@+id/BtnAgregar"
+            android:layout_alignRight="@+id/btn_Buscar"
+            android:layout_alignEnd="@+id/btn_Buscar" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Agregar"
-            android:id="@+id/btnAdd"
-            android:onClick="irAddIngrediente"
-            android:layout_marginBottom="106dp"
+            android:id="@+id/BtnAgregar"
+            android:onClick="onClickAgregar"
+            android:layout_marginBottom="85dp"
             android:layout_alignParentBottom="true"
             android:layout_toRightOf="@+id/btn_Buscar"
             android:layout_toEndOf="@+id/btn_Buscar" />
@@ -65,7 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Seleccionar Ingrediente"
+        android:text="Ingredientes"
         android:id="@+id/textView2"
         android:layout_alignTop="@+id/relativeLayout2"
         android:layout_centerHorizontal="true" />

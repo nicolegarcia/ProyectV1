@@ -5,9 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.widget.Toast;
-
-import com.example.nicole.proyectv1.Despensa.Ingrediente;
 
 /**
  * Created by nicole on 14-01-2016.
@@ -36,6 +33,21 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     private static final String TABLE_CREATE2 = "create table ingrediente (id_ingrediente primary key not null , "+
             "name_ingrediente text not null);";
+
+    //TABLA DE RECETAS BASE DE DATOS
+    private static final String TABLE_NAME3 = "recetas";
+    private static final String COLUMN_ID3 = "id_receta";
+    private static final String COLUMN_NAME_RECETA = "name_receta";
+    private static final String COLUMN_ING1 = "ing1";
+    private static final String COLUMN_ING2 = "ing2";
+    private static final String COLUMN_ING3 = "ing3";
+    private static final String COLUMN_ING4 = "ing4";
+    private static final String COLUMN_ING5 = "ing5";
+    private static final String PROCESS = "metodo";
+
+    private static final String TABLE_CREATE3 = "create table recetas (id_receta primary key not null , )"+
+            "name_receta text not null , ing1 text not null , ing2 text not null , ing4 text , ing5 text , metodo text not null);";
+
 
 
     public DataBaseHelper(Context context) {
@@ -99,29 +111,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
 //********************METODOS PARA LA TABLA INGREDIENTES************************
 
-    //INSERTAR NUEVO INGREDIENTE
-    public void insertIngrediente( Ingrediente u)
-    {
-        db = this.getWritableDatabase();
-        ContentValues values = new ContentValues();
 
-        String query = "select * from ingrediente";
-        Cursor cursor = db.rawQuery(query , null);
-        int count = cursor.getCount();
-        values.put(COLUMN_ID2 , count);
-        //values.put(COLUMN_INGREDIENTE_NAME , u.getName());
-
-
-        db.insert(TABLE_NAME2, null, values);
-
-    }
-
-    public Cursor getIngredientes ()
-    {
-        String columnas[] = {COLUMN_ID2, COLUMN_INGREDIENTE_NAME};
-        Cursor c = this.getReadableDatabase().query(TABLE_NAME2,columnas,null,null,null,null,null);
-        return c;
-    }
 
 
 

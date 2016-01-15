@@ -6,20 +6,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.CheckBox;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import com.example.nicole.proyectv1.R;
-import com.example.nicole.proyectv1.Recetas.Receta;
 
 import java.util.ArrayList;
 
 /**
- * Created by SG on 06-01-2016.
+ * Created by nicole on 15-01-2016.
  */
-public class IngredientAdapter extends ArrayAdapter<String> {
+public class IngredientAdapter extends ArrayAdapter<String>{
+
 
     ArrayList<String> modelItems = null;
     Context context;

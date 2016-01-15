@@ -55,6 +55,7 @@ public class SignUp extends Activity {
 
                 Intent j = new Intent(SignUp.this, Display_Login.class);
                 startActivity(j);
+
             }
 
 

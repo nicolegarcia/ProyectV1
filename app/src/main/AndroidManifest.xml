@@ -46,8 +46,8 @@
         </activity>
 
         <activity
-            android:name=".DespensaActivity"
-            android:label="Despensa">
+            android:name=".Ingredientes.IngredientesActivity"
+            android:label="Ingredientes">
         </activity>
 
         <activity

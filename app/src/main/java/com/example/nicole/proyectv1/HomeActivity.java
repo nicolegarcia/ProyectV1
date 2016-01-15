@@ -33,7 +33,7 @@ public class HomeActivity extends Activity{
         despensa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HomeActivity.this, DespensaActivity.class));
+                startActivity(new Intent(HomeActivity.this, Display_Login.class));
 
             }
         });
