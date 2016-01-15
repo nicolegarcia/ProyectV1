@@ -11,11 +11,6 @@
     tools:context=".MainActivity"
     android:background="@drawable/fondoinicio">
 
-    <TextView android:text="Hello World!"
-        android:layout_width="wrap_content"
-        android:id="@+id/key"
-        android:layout_height="wrap_content" />
-
 
     <com.facebook.login.widget.LoginButton
         android:id="@+id/login_button"
