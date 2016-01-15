@@ -13,18 +13,48 @@ public class Receta extends Object{
     String procedimiento;
     String urlImage;
 
+    public Receta(){
+
+    }
+    public Receta(String titulo,
+                  String descripcion,
+                  ArrayList<String> ingredientes,
+                  String procedimiento,
+                  String urlImage ) {
+        this.titulo = titulo;
+        this.descripcion = descripcion;
+        this.ingredientes = ingredientes;
+        this.procedimiento = procedimiento;
+        this.urlImage = urlImage;
+    }
+
+    public String getTitulo() {
+
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+
+        this.titulo = titulo;
+    }
+
+    public String getDescripcion() {
+
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+
+        this.descripcion = descripcion;
+    }
 
     public String getUrlImage() {
+
         return urlImage;
     }
 
     public void setUrlImage(String urlImage) {
         this.urlImage = urlImage;
-    }
-
-    public Receta(String titulo, String descripcion) {
-        this.titulo = titulo;
-        this.descripcion = descripcion;
     }
 
     public ArrayList<String> getIngredientes() {
@@ -36,27 +66,14 @@ public class Receta extends Object{
     }
 
     public String getProcedimiento() {
+
         return procedimiento;
     }
 
     public void setProcedimiento(String procedimiento) {
+
         this.procedimiento = procedimiento;
     }
 
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
 
 }

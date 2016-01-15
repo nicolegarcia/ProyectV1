@@ -51,12 +51,12 @@
         </activity>
 
         <activity
-            android:name=".RecetasActivity"
+            android:name=".Recetas.RecetasActivity"
             android:label="Recetas">
         </activity>
 
         <activity
-            android:name=".DetalleReceta"
+            android:name=".DetalleReceta.DetalleRecetaActivity"
             android:label="Detalles">
         </activity>
 

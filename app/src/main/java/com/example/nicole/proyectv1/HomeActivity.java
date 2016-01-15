@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.facebook.Profile;
+import com.example.nicole.proyectv1.Recetas.RecetasActivity;
 
 /**
  * Created by SG on 05-01-2016.

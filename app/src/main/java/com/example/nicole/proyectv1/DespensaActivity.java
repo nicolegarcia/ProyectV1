@@ -31,8 +31,6 @@ public class DespensaActivity extends Activity {
 
     private void irAddIngrediente(){
 
-
-
         Button agregar = (Button) findViewById(R.id.btnAdd);
         final EditText text = (EditText) findViewById(R.id.addIngText);
         agregar.setOnClickListener(new View.OnClickListener() {
@@ -46,7 +44,7 @@ public class DespensaActivity extends Activity {
     }
     private  void mostrarIngredientes(){
 
-        lv = (ListView) findViewById(R.id.listView1);
+        lv = (ListView) findViewById(R.id.listReceta);
 
         modelItems = new Ingrediente[ingredientes.size()];
         for (int i=0; i<ingredientes.size(); i++) {
