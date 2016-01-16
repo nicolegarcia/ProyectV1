@@ -15,33 +15,29 @@ import java.security.NoSuchAlgorithmException;
  */
 public class MyApplication extends Application {
 
-        @Override
-        public void onCreate() {
-            super.onCreate();
-            printhashkey();
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        printhashkey();
 
-        }
+    }
 
-        public void printhashkey(){
+    public void printhashkey(){
 
-            try {
-                PackageInfo info = getPackageManager().getPackageInfo(
-                        "com.example.nicole.proyectofinal",
-                        PackageManager.GET_SIGNATURES);
-                for (Signature signature : info.signatures) {
-                    MessageDigest md = MessageDigest.getInstance("SHA");
-                    md.update(signature.toByteArray());
-                    Log.d("NICOLE:", Base64.encodeToString(md.digest(), Base64.DEFAULT));
-                }
-            } catch (PackageManager.NameNotFoundException e) {
-
-            } catch (NoSuchAlgorithmException e) {
-
+        try {
+            PackageInfo info = getPackageManager().getPackageInfo(
+                    "com.example.nicole.proyectofinal",
+                    PackageManager.GET_SIGNATURES);
+            for (Signature signature : info.signatures) {
+                MessageDigest md = MessageDigest.getInstance("SHA");
+                md.update(signature.toByteArray());
+                Log.d("NICOLE:", Base64.encodeToString(md.digest(), Base64.DEFAULT));
             }
+        } catch (PackageManager.NameNotFoundException e) {
+
+        } catch (NoSuchAlgorithmException e) {
+
         }
+    }
 
 }
-
-
-
-

@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.nicole.proyectv1.Despensa.DespensaActivity;
 import com.example.nicole.proyectv1.Recetas.RecetasActivity;
 import com.facebook.Profile;
 
@@ -34,7 +35,7 @@ public class HomeActivity extends Activity{
         despensa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HomeActivity.this, Display_Login.class));
+                startActivity(new Intent(HomeActivity.this, DespensaActivity.class));
 
             }
         });

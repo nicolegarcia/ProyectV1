@@ -1,26 +1,27 @@
 package com.example.nicole.proyectv1;
 
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.Signature;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Base64;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.Toast;
 
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
+import com.facebook.Profile;
 import com.facebook.appevents.AppEventsLogger;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,14 +35,20 @@ public class MainActivity extends AppCompatActivity {
 
         callbackManager = CallbackManager.Factory.create();
 
-        LoginButton loginButton = (LoginButton) findViewById(R.id.login_button);
+        final LoginButton loginButton = (LoginButton) findViewById(R.id.login_button);
         loginButton.setReadPermissions("public_profile", "email", "user_friends");
-
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
+
                 Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                 startActivity(intent);
+                try {
+                    crearUsuario();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Toast.makeText(getApplicationContext(), "no creó usuario", Toast.LENGTH_SHORT);
+                }
                 System.out.print("Logged in");
             }
 
@@ -53,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onError(FacebookException exception) {
-                // App code
+                Toast.makeText(MainActivity.this, "error to Login Facebook", Toast.LENGTH_SHORT).show();
                 Log.i("Error", "Error");
             }
         });
@@ -116,4 +123,27 @@ public class MainActivity extends AppCompatActivity {
         // Logs 'app deactivate' App Event.
         AppEventsLogger.deactivateApp(this);
     }
+
+    void crearUsuario() throws JSONException {
+        String name = Profile.getCurrentProfile().getName();
+        JSONObject obj = new JSONObject();
+        JSONArray arr = new JSONArray();
+
+        arr.put("harina");
+        arr.put("papas");
+        arr.put("huevo");
+        arr.put("cebolla");
+
+        obj.put("name", name);
+        obj.put("ingredient", arr);
+
+        try{
+            FileOutputStream fileout = new FileOutputStream("/res/raw/usuarios.json");
+            ObjectOutputStream out = new ObjectOutputStream(fileout);
+            out.writeObject(obj.toString());
+        }catch (Exception e){
+            Toast.makeText(getApplicationContext(), "no se agregó ingrediente", Toast.LENGTH_SHORT).show();
+        }
+    }
+
 }

@@ -46,17 +46,17 @@
         </activity>
 
         <activity
-            android:name=".Ingredientes.IngredientesActivity"
-            android:label="Ingredientes">
-        </activity>
-
-        <activity
             android:name=".Recetas.RecetasActivity"
             android:label="Recetas">
         </activity>
 
         <activity
             android:name=".DetalleReceta.DetalleRecetaActivity"
+            android:label="Detalles">
+        </activity>
+
+        <activity
+            android:name=".Despensa.DespensaActivity"
             android:label="Detalles">
         </activity>
 
