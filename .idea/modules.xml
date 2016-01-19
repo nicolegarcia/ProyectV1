@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/ProyectV1-255d9db28ab59d8539a7b66b91b5ae94e1564d62.iml" filepath="$PROJECT_DIR$/ProyectV1-255d9db28ab59d8539a7b66b91b5ae94e1564d62.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/ProyectV1.iml" filepath="$PROJECT_DIR$/ProyectV1.iml" />
+>>>>>>> pruebaJsonUser
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
