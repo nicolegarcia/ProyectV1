@@ -1,24 +1,17 @@
 package com.example.nicole.proyectv1.Despensa;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.nicole.proyectv1.R;
-import com.example.nicole.proyectv1.Usuario;
-import com.facebook.Profile;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 /**
@@ -27,85 +20,82 @@ import java.util.ArrayList;
 public class DespensaActivity extends Activity {
 
     ListView lv;
-    ArrayList<String> modelItems;
-    ParseJsonUsuarios parseUser;
-    ArrayList<Usuario> listUser;
-    Profile profile;
+    ArrayList<String> listIngredientes = new ArrayList<String>();
+    DespensaAdapter adapter;
+    ArrayList<String> selectedIngredients;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.despensa);
-        InputStream inputUser = getResources().openRawResource(R.raw.usuarios);
 
-        try{
-            //con parseReceta se crea el ArrayList de recetas listRecetas
-            parseUser = new ParseJsonUsuarios();
-            listUser = parseUser.readJsonStream(inputUser);
-        } catch (Exception e){
-            e.printStackTrace();
-        }
+        //Inicializar lista de ingredientes
+        listIngredientes.add("huevos");
+        listIngredientes.add("harina");
+        listIngredientes.add("cebolla");
+        listIngredientes.add("papas");
+        listIngredientes.add("azucar");
+        listIngredientes.add("leche");
+        listIngredientes.add("vainilla");
+        listIngredientes.add("manjar");
 
         mostrarIngredientes();
         addIngrediente();
+        buscarReceta();
     }
 
+    //Agrega Ingrediente a lista
     private void addIngrediente(){
-
-        final InputStream inputUser = getResources().openRawResource(R.raw.usuarios);
-
         Button agregar = (Button) findViewById(R.id.btnAdd);
         final EditText text = (EditText) findViewById(R.id.addIngText);
         agregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String newIng = text.getText().toString();
-                JSONArray arr = null;
-                try {
-                    arr = new JSONArray(inputUser.toString());
-                } catch (JSONException e) {
-                    e.printStackTrace();
+                //verifica que se haya ingresado texto válido
+                if(newIng.equals("") | newIng.contains("1")| newIng.contains("2")| newIng.contains("3")){
+                    Toast.makeText(getApplicationContext(),"Ingrese Ingrediente válido", Toast.LENGTH_SHORT).show();
+                }else {
+                    listIngredientes.add(newIng);
+                    text.setText("");
                 }
-                if (arr != null) {
-                    for(int i = 0; i < arr.length(); i++){
+            }
+        });
+        mostrarIngredientes();
+    }
+    //muestra lista de ingredientes en un list view adaptado por DespensaAdapter
+    private void mostrarIngredientes(){
 
-                        JSONObject jsonObj = null; // get the josn object
-                        try {
-                            jsonObj = (JSONObject)arr.get(i);
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                        try {
-                            if (jsonObj != null) {
-                                if(jsonObj.getString("name").equals(Profile.getCurrentProfile().getName())){ // compare for the key-value
-                                    ((JSONObject)arr.get(i)).getJSONArray("ingredient").put(newIng); // put the new value for the key
-                                    try{
-                                        FileOutputStream fileout = new FileOutputStream("/res/raw/usuarios.json");
-                                        ObjectOutputStream out = new ObjectOutputStream(fileout);
-                                        out.writeObject(arr.toString());
-                                    }catch (Exception e){
-                                        Toast.makeText(getApplicationContext(), "no se agregó ingrediente", Toast.LENGTH_SHORT).show();
-                                    }
+        lv = (ListView) findViewById(R.id.listView1);
+        for (int i=0; i<listIngredientes.size(); i++){
+            adapter = new DespensaAdapter(this, listIngredientes);
+            lv.setAdapter(adapter);
+        }
+    }
 
-                                }
-                            }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
+    //a partir de se los ingredientes seleccionados, busca recetas que coincidan
+    private void buscarReceta(){
+        selectedIngredients = new ArrayList<String>();
+        Button btnBuscar = (Button) findViewById(R.id.btn_Buscar);
+        btnBuscar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Al apretar el boton buscar receta guarda el texto de los checkbox que han sido checkeados
+                CheckBox cb;
+                for (int i = 0; i<lv.getChildCount();i++)
+                {
+                    cb = (CheckBox)lv.getChildAt(i).findViewById(R.id.checkBox1);
+                    if(cb.isChecked())
+                    {
+                        selectedIngredients.add(cb.getText().toString());
                     }
                 }
-                text.setText("");
+                //la lista de los checkbox checkeados es enviada al siguiente activity
+                Intent intent = new Intent(DespensaActivity.this, RecetasBuscadasActivity.class);
+                intent.putExtra("chkIng", selectedIngredients);
+                startActivity(intent);
             }
         });
     }
 
-    private void mostrarIngredientes(){
 
-        lv = (ListView) findViewById(R.id.listView1);
-        for (int i=0; i<listUser.size(); i++){
-            if(profile.getCurrentProfile().getName().equals(listUser.get(i).getName())){
-                DespensaAdapter adapter = new DespensaAdapter(this, listUser.get(i).getIngredientesUsuario());
-                lv.setAdapter(adapter);
-            }
-        }
-    }
 }

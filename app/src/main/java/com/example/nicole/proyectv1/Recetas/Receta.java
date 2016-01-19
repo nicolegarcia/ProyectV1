@@ -5,6 +5,9 @@ import java.util.ArrayList;
 /**
  * Created by SG on 06-01-2016.
  */
+
+//Objeto modelo receta útil para leer desde json y para mostrar recetas en layout
+
 public class Receta extends Object{
 
     String titulo;
@@ -13,9 +16,11 @@ public class Receta extends Object{
     String procedimiento;
     String urlImage;
 
+    //constructor por defecto
     public Receta(){
-
     }
+
+    //constructor con parámetros
     public Receta(String titulo,
                   String descripcion,
                   ArrayList<String> ingredientes,

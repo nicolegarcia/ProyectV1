@@ -17,6 +17,9 @@ import java.util.ArrayList;
 /**
  * Created by SG on 06-01-2016.
  */
+
+//Clase que permite mostrar recetas en el listView de Recetas, cada fila está dada por row_recetas
+
 public class RecetasAdapter extends ArrayAdapter<Receta> {
 
     ArrayList<Receta> listRecetas = null;

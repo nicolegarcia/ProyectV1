@@ -11,17 +11,9 @@ import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
-import com.facebook.Profile;
 import com.facebook.appevents.AppEventsLogger;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.FileOutputStream;
-import java.io.ObjectOutputStream;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,36 +23,33 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
+
         setContentView(R.layout.activity_main);
 
         callbackManager = CallbackManager.Factory.create();
 
         final LoginButton loginButton = (LoginButton) findViewById(R.id.login_button);
         loginButton.setReadPermissions("public_profile", "email", "user_friends");
+
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+
             @Override
             public void onSuccess(LoginResult loginResult) {
 
                 Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                 startActivity(intent);
-                try {
-                    crearUsuario();
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                    Toast.makeText(getApplicationContext(), "no creó usuario", Toast.LENGTH_SHORT);
-                }
+
                 System.out.print("Logged in");
             }
 
             @Override
             public void onCancel() {
                 // App code
-
             }
 
             @Override
             public void onError(FacebookException exception) {
-                Toast.makeText(MainActivity.this, "error to Login Facebook", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Error al realizar Login Facebook", Toast.LENGTH_SHORT).show();
                 Log.i("Error", "Error");
             }
         });
@@ -75,10 +64,7 @@ public class MainActivity extends AppCompatActivity {
         {
             Intent i = new Intent(MainActivity.this, Display_Login.class);
             startActivity(i);
-
         }
-
-
     }
 
     @Override
@@ -87,7 +73,26 @@ public class MainActivity extends AppCompatActivity {
         callbackManager.onActivityResult(requestCode, resultCode, data);
     }
 
-/*    public void printHashKey(){ ------------------>//Key para funcionar facebook
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        // Logs 'install' and 'app activate' App Events.
+        AppEventsLogger.activateApp(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        // Logs 'app deactivate' App Event.
+        AppEventsLogger.deactivateApp(this);
+
+    }
+
+    /* //Retorna Key en logcat necesario para registrar app en facebook y realizar login
+
+    public void printHashKey(){
         TextView algo = (TextView) findViewById(R.id.key);
 
         try{
@@ -107,43 +112,4 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }*/
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        // Logs 'install' and 'app activate' App Events.
-        AppEventsLogger.activateApp(this);
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-
-        // Logs 'app deactivate' App Event.
-        AppEventsLogger.deactivateApp(this);
-    }
-
-    void crearUsuario() throws JSONException {
-        String name = Profile.getCurrentProfile().getName();
-        JSONObject obj = new JSONObject();
-        JSONArray arr = new JSONArray();
-
-        arr.put("harina");
-        arr.put("papas");
-        arr.put("huevo");
-        arr.put("cebolla");
-
-        obj.put("name", name);
-        obj.put("ingredient", arr);
-
-        try{
-            FileOutputStream fileout = new FileOutputStream("/res/raw/usuarios.json");
-            ObjectOutputStream out = new ObjectOutputStream(fileout);
-            out.writeObject(obj.toString());
-        }catch (Exception e){
-            Toast.makeText(getApplicationContext(), "no se agregó ingrediente", Toast.LENGTH_SHORT).show();
-        }
-    }
-
 }

@@ -5,13 +5,13 @@ import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.nicole.proyectv1.R;
 import com.example.nicole.proyectv1.Recetas.ParseJsonReceta;
 import com.example.nicole.proyectv1.Recetas.Receta;
-import com.example.nicole.proyectv1.DetalleReceta.*;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -54,6 +54,8 @@ public class DetalleRecetaActivity extends Activity{
                 mostrarReceta(listRecetas.get(i));
             }
         }
+
+        addListenerOnRatingBar();
     }
 
     //a partir de la receta que coincide se actualizan los valores de los objetos que componen detalle_receta.xml
@@ -76,4 +78,18 @@ public class DetalleRecetaActivity extends Activity{
                 .load(receta.getUrlImage())
                 .into(img);
     }
+
+    public void addListenerOnRatingBar() {
+
+        RatingBar ratingBar = (RatingBar) findViewById(R.id.ratingBar);
+
+        //if rating value is changed,
+        //display the current rating value in the result (textview) automatically
+        ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            public void onRatingChanged(RatingBar ratingBar, float rating,
+                                        boolean fromUser) {
+            }
+        });
+    }
+
 }

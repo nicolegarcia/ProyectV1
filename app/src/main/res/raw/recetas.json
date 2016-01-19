@@ -17,7 +17,7 @@
 		"cebollin",
 		"tomate",
 		"cilantro",
-		"aceite",
+		"Aceite",
 		"ají verde",
 		"limón"
 	],
@@ -99,7 +99,7 @@
 	"imagen": "http://g.cdn.ecn.cl/cocina/files/2015/05/Queque-de-Yogurt.jpg",
 	"description": "Postre",
 	"ingredientes": [
-		"huevo",
+		"huevos",
 		"harina",
 		"polvos de hornear",
 		"azucar",
@@ -113,7 +113,7 @@
 	"imagen": "http://www.loquesecocinaenestacasa.com/web/media/k2/items/cache/f9bbdeb62248e2fc4418a6935e64cf4c_XL.jpg",
 	"description": "Aperitivo o segundo plato.",
 	"ingredientes": [
-		"huevo",
+		"huevos",
 		"cebolla",
 		"papas"
 	],

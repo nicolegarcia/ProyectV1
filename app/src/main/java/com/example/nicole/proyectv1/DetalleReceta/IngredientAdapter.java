@@ -15,6 +15,10 @@ import java.util.ArrayList;
 /**
  * Created by nicole on 15-01-2016.
  */
+
+//Clase adaptador con ArrayList<String> como parámetro
+// permite mostrar Ingredientes como listView en el detalle de la receta
+
 public class IngredientAdapter extends ArrayAdapter<String>{
 
 

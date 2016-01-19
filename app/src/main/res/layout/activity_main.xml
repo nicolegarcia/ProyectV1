@@ -17,8 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="147dp"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@+id/display_button"
         android:layout_centerHorizontal="true" />
 
     <Button
@@ -31,6 +30,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:longClickable="false"
-        android:onClick="onButtonClick" />
+        android:onClick="onButtonClick"
+        android:visibility="invisible" />
 
 </RelativeLayout>

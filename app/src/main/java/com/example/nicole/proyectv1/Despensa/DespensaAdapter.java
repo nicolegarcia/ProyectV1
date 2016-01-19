@@ -16,10 +16,15 @@ import java.util.ArrayList;
 /**
  * Created by SG on 05-01-2016.
  */
+
+//Clase adpatador para mostrar Ingredientes en modo de checkbox
+//A partir de un ArrayList<String> con los ingredientes se hace un checkbox.setText para mostrar cada nombre
 public class DespensaAdapter extends ArrayAdapter<String> {
 
     ArrayList<String> modelItems = null;
     Context context;
+    CheckBox cb;
+    ArrayList<String> chkList;
 
     public DespensaAdapter(Context context, ArrayList<String> resource) {
         super(context, R.layout.row_despensa,resource);
@@ -31,9 +36,10 @@ public class DespensaAdapter extends ArrayAdapter<String> {
 
         LayoutInflater inflater = ((Activity) context).getLayoutInflater();
         convertView = inflater.inflate(R.layout.row_despensa, parent, false);
-        CheckBox cb = (CheckBox) convertView.findViewById(R.id.checkBox1);
+        cb = (CheckBox) convertView.findViewById(R.id.checkBox1);
         cb.setText(modelItems.get(position));
 
         return convertView;
     }
+
 }

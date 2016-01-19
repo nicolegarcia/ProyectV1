@@ -60,6 +60,11 @@
             android:label="Detalles">
         </activity>
 
+        <activity
+            android:name=".Despensa.RecetasBuscadasActivity"
+            android:label="Busqueda">
+        </activity>
+
     </application>
 
 

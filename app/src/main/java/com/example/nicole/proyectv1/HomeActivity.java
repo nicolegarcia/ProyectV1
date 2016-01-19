@@ -22,6 +22,7 @@ public class HomeActivity extends Activity{
 
         setContentView(R.layout.home);
 
+        //Se muestra nombre entregado por facebook en layout home
         TextView name = (TextView) findViewById(R.id.userName);
         Profile profile = Profile.getCurrentProfile();
         name.setText("BIENVENID@ \n".concat(profile.getName()));
@@ -29,7 +30,7 @@ public class HomeActivity extends Activity{
         irDespensa();
         irRecetas();
     }
-
+    //acción boton para ir a DespensaActivity
     private void irDespensa(){
         Button despensa = (Button) findViewById(R.id.btn_VerDespensa);
         despensa.setOnClickListener(new View.OnClickListener() {
@@ -40,7 +41,7 @@ public class HomeActivity extends Activity{
             }
         });
     }
-
+    //acción boton para ir a RecetasActivity
     private void irRecetas(){
         Button recetas = (Button) findViewById(R.id.btn_BuscarReceta);
         recetas.setOnClickListener(new View.OnClickListener() {
