@@ -1,0 +1,121 @@
+[{
+	"name": "Sopaipillas",
+	"imagen": "http://www.ariztiamasjoven.cl/wp-content/uploads/2015/08/mj-sopaipillas.png",
+	"description": "Entrante o postre tipico chileno.",
+	"ingredientes": [
+		"Zapallo",
+		"Harina",
+		"Manteca",
+		"Aceite"
+	],
+	"procedimiento": "En un bol poner 1 Kg de zapallo cocido con sal y moler hasta obtener un puré. Agrega la cantidad necesaria de harina (con polvos de hornear incluidos) para formar una masa suave (aprox. 2 tazas), y la manteca DERRETIDA. Mezclar para formar una masa. Amasa un poco y uslerea de 1 /2 cm de grosor. Corta las sopaipillas con un molde redondo y pincha con un tenedor para q no se inflen al freírlas. En un sartén calienta el aceite a fuego medio y freír las sopaipillas por ambos lados hasta dorar. Estila en papel absorbente y servir. Se puede servir acompañado de pebre como entrante, o con azúcar glass de postre."
+}, {
+	"name": "Pebre",
+	"imagen": "http://www.facilfood.cl/kcfinder/upload/images/original/recetas/pebre-460-500x411.jpg",
+	"description": "Salsa del tipo adobo típica de Chile.",
+	"ingredientes": [
+		"cebollin",
+		"tomate",
+		"cilantro",
+		"Aceite",
+		"ají verde",
+		"limón"
+	],
+	"procedimiento": "Pica los cebollines y el tomate en cubos pequeños. Pica fino el cilantro. Retira las semillas del ají y pícalo fino. Poner todo en bol y aliña con aceite, jugo de limón, sal y pimienta a gusto. "
+}, {
+	"name": "Tomatican",
+	"imagen": "http://www.gourmet.cl/wp-content/uploads/2014/12/Tomatican.jpg",
+	"description": "Segundo plato.",
+	"ingredientes": [
+		"choclo",
+		"tomate",
+		"carne",
+		"aceite",
+		"cebolla",
+		"ajo"
+	],
+	"procedimiento": "Cortar 250 gr de carne elegida en tiras. Picar cebolla en cubos pequeños y moler ajo. En una olla o sartén grande calentar 1 cucharada de aceite a fuego alto. Agregar la carne y cocinar 4 a 5 minutos o hasta dorar por todos lados. Añadir la cebolla y ajo y cocinar hasta que la cebolla esté transparente; sazonar con sal, pimienta y orégano u otra hierba o sazón de su gusto que tenga en casa. Reducir el calor y cocinar 4 a 6 minutos más. Agregar 500 gr de choclo y cocinar 5 a 6 minutos. Finalmente agregar los tomates pelados y cortados en trozos, con su jugo incluido. Mezclar muy cuidadosamente. Corregir la sazón agregando más sal y pimienta si fuera necesario. Servir caliente junto a arroz, puré o el acompañamiento que elija."
+}, {
+	"name": "Pan Amasado",
+	"imagen": "http://www.cuchareando.cl/sites/default/files/RECETA%20PAN%20AMASADO_1_0.jpg",
+	"description": "Horneado de masa.",
+	"ingredientes": [
+		"harina",
+		"agua",
+		"manteca",
+		"azucar",
+		"sal",
+		"levadura"
+	],
+	"procedimiento": "En una fuente echar 1 Kg de harina, 2 cucharaditas de levadura, 1/2 cucharadita azúcar y revolver en seco. Luego, agregar 400 ml agua con 1 cucharada de sal (o a gusto) y 100 gr de manteca, ambas tibias. Unir todo, amasar hasta que este suave y bien integrado cada uno de los ingredientes. Dejar descansar 20 minutos la masa tapada y luego formar bollos, aplastar y pinchar con el tenedor. Llevar al horno pre-calentado por unos 10 minutos por lado a temperatura media o hasta que se vean tostados."
+}, {
+	"name": "Guacamole",
+	"imagen": "http://www.californiaavocado.com/cmspages/getfile.aspx?guid=412db3db-b024-40f2-af24-eb660e17435f",
+	"description": "Salsa para tacos o cóctel. Típica de México.",
+	"ingredientes": [
+		"palta",
+		"cebolla",
+		"tomate",
+		"ají",
+		"limón",
+		"cilantro"
+	],
+	"procedimiento": "Trocear la cebolla y el tomate en trozos muy pequeños, lo más pequeños que podamos, y las hojas de cilantro las picaremos también lo más finas que podamos. Echamos todos estos ingredientes en el recipiente en el que prepararemos el guacamole.Las paltas deben estar maduras, se saca toda la pulpa posible, y se añade al recipiente junto con el jugo de limon, una pizca de sal y el ají. Se machacan todos los ingredientes con un tenedor. Servir frio a la mesa en un  pocillo."
+}, {
+	"name": "Panqueques con Manjar",
+	"imagen": "http://www.comolohago.cl/wp-content/uploads/2014/12/paso-7-opt.jpg",
+	"description": "Postre",
+	"ingredientes": [
+		"harina",
+		"leche",
+		"huevos",
+		"vainilla",
+		"manjar"
+	],
+	"procedimiento": "Ponemos 4 huevos en un bol y batimos hasta que queden completamente disueltos. Debemos tener cuidado de que el batido sea por poco tiempo para que no espesen. Agregamos las 2 tazas de leche, 2 tazas de harina, una pizca de sal y la esencia de vainilla, batimos todo junto hasta formar una mezcla homogénea. A continuación ponemos nuestro sartén a precalentar a fuego medio. Una vez que esté bien caliente vertemos la mezcla en el sartén (con ayuda del cucharón) de manera que se distribuya homogéneamente por toda la superficie, hasta formar un círculo. Dejamos cocinar nuestro panqueque por unos momentos y cuando los bordes se tornen de color café debemos comenzar a despegar la masa con la espátula para poder darla vuelta. Una vez dado vuelta el panqueque, lo dejamos cocinar unos minutos más y retiramos del fuego una vez que se torne de color café. Ahora sólo nos queda ponerle el relleno de manjar y enrollarlo o doblarlo, según sea nuestra preferencia."
+}, {
+	"name": "Bavarois",
+	"imagen": "http://www.aliciacrocco.com.ar/wp-content/uploads/2015/07/bavarois-de-frutillas.jpg",
+	"description": "Postre.",
+	"ingredientes": [
+		"leche evaporada",
+		"jalea",
+		"agua"
+	],
+	"procedimiento": "Primero, la leche evaporada debe estar refrigerada por al menos 8 horas. Comienza hidratando los 100 gr de jalea (sabor a elección) en las dos tazas de agua caliente, removiendo de vez en cuando para disolver mejor. Espera a que se entibie, pero que no se enfríe completamente (no debe tomar textura). Reserva. Aparte, bate enérgicamente la leche evaporada hasta que espume y triplique su volumen. Luego, agrega la jalea (ya tibia) poco a poco a la leche evaporada batiendo constantemente hasta juntar homogéneamente ambos ingredientes.    Una vez listo, vierte la preparación en pocillos individuales y lleva a refrigeración hasta que tome mayor textura. Al momento de servir puedes acompañar con frutas picadas o salsas como más te guste."
+}, {
+	"name": "Machas a la Parmesana",
+	"imagen": "http://www.gourmet.cl/wp-content/uploads/2011/04/Machas-a-la-Parmesana.jpg",
+	"description": "Aperitivo.",
+	"ingredientes": [
+		"machas",
+		"mantequilla",
+		"vino blanco",
+		"queso parmesano"
+	],
+	"procedimiento": "Se abren las machas, se sacan de sus conchas y se lavan bien. Luego se pone cada lengua sobre una concha y se aliña con sal y pimienta a gusto, luego se agrega un poco de mantequilla, vino blanco y sobre ellas un poco de queso rallado. Se llevan al horno previamente calentado hasta que el queso este derretido y dorado. "
+}, {
+	"name": "Queque",
+	"imagen": "http://g.cdn.ecn.cl/cocina/files/2015/05/Queque-de-Yogurt.jpg",
+	"description": "Postre",
+	"ingredientes": [
+		"huevos",
+		"harina",
+		"polvos de hornear",
+		"azucar",
+		"mantequilla",
+		"leche",
+		"vainilla"
+	],
+	"procedimiento": "Bata 3 cucharadas de azúcar con las 3 cucharadas de mantequilla hasta formar una mezcla cremosa, agregue los 3 huevos, la taza de leche y la cucharada de escencia de vainilla, mezclar hasta que logre una masa homogénea. Posteriormente, agregue la taza de harina cernida con las 3 cucharaditas de polvos de hornear, mezclar nuevamente hasta lograr una masa homogénea . Vacíe la mezcla en un molde cubierto con mantequilla y dispóngalo en el horno, fuego medio, durante 45 minutos.Retire del horno, espere que se enfríe, desmóldelo y sirva."
+}, {
+	"name": "Tortilla Española",
+	"imagen": "http://www.loquesecocinaenestacasa.com/web/media/k2/items/cache/f9bbdeb62248e2fc4418a6935e64cf4c_XL.jpg",
+	"description": "Aperitivo o segundo plato.",
+	"ingredientes": [
+		"huevos",
+		"cebolla",
+		"papas"
+	],
+	"procedimiento": "Pon a calentar el aceite, idealmente de oliva, en una sartén honda. Debe estar caliente pero no demasiado, para que la cebolla y la papa no se sofrían. Añade la cebolla al aceite y deja cocinar durante un par de minutos a fuego medio alto. Agrega 3 papas en rodajas y una cebolla cortada en pluma, dejar cocinar hasta que veas que empieza a ponerse transparente. Aparte en un recipiente, bate los huevos con sal al gusto, retira la cebolla y la papa de la sartén con la ayuda de una espumadera (para evitar traspasar el aceite) y agrégalas a los huevos. Revuelve bien y lleva toda la mezcla en una fuente al horno, para que los huevos tomen consistencia. Cuando notes que ya está firme y la superficie ha tomado color, ya está lista. Ahora solo queda la mejor parte: servirla y probar esa obra de arte que has creado con tus propias manos."
+}]

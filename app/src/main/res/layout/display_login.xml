@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondodespensa">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Username"
+        android:id="@+id/textuser"
+        android:layout_marginTop="107dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TVusername"
+        android:layout_below="@+id/textuser"
+        android:layout_alignRight="@+id/TVpass"
+        android:layout_alignEnd="@+id/TVpass"
+        android:layout_alignLeft="@+id/TVpass"
+        android:layout_alignStart="@+id/TVpass" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Password"
+        android:id="@+id/textView"
+        android:layout_below="@+id/TVusername"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/TVpass"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:id="@+id/loginlocal_button"
+        android:onClick="onButtonLoginClick"
+        android:layout_marginTop="53dp"
+        android:layout_below="@+id/TVpass"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up Here"
+        android:id="@+id/Signuplocal_button"
+        android:onClick="onButtonLoginClick"
+        android:layout_below="@+id/loginlocal_button"
+        android:layout_alignRight="@+id/textuser"
+        android:layout_alignEnd="@+id/textuser" />
+
+</RelativeLayout>

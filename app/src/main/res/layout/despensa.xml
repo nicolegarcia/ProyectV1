@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondodespensa">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:id="@+id/addIngText"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp"
+        android:inputType="text"
+        android:hint="Ingrediente"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:cursorVisible="true"
+        android:background="#78ffffff" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar Ingrediente"
+        android:id="@+id/btnAdd"
+        android:onClick="irAddIngrediente"
+        android:layout_below="@+id/addIngText"
+        android:layout_alignLeft="@+id/addIngText"
+        android:layout_alignStart="@+id/addIngText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Seleccionar Ingredientes"
+        android:id="@+id/textView2"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/btnAdd"
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000" />
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btnAdd"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="60dp"
+        android:weightSum="1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="match_parent"
+            android:layout_height="239dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp">
+        </ListView>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buscar Receta"
+            android:id="@+id/btn_Buscar"
+            android:layout_marginRight="38dp"
+            android:layout_marginEnd="38dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="25dp" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

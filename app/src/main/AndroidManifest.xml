@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.nicole.proyectv1" >
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon_app"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id"/>
+
+        <activity
+            android:name=".MainActivity" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".Display_Login"
+            android:label="Login">
+        </activity>
+
+        <activity
+            android:name=".SignUp"
+            android:label="RegistroUser">
+        </activity>
+
+        <activity
+            android:name=".HomeActivity"
+            android:label="Home">
+        </activity>
+
+        <activity
+            android:name=".Recetas.RecetasActivity"
+            android:label="Recetas">
+        </activity>
+
+        <activity
+            android:name=".DetalleReceta.DetalleRecetaActivity"
+            android:label="Detalles">
+        </activity>
+
+        <activity
+            android:name=".Despensa.DespensaActivity"
+            android:label="Detalles">
+        </activity>
+
+        <activity
+            android:name=".Despensa.RecetasBuscadasActivity"
+            android:label="Busqueda">
+        </activity>
+
+    </application>
+
+
+</manifest>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/fondodespensa">
+
+    <TextView
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Titulo Receta"
+        android:id="@+id/txtTitle"
+        android:layout_marginTop="55dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/lstIngredients"
+        android:layout_alignStart="@+id/lstIngredients" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/imageView2"
+        android:layout_alignTop="@+id/lstIngredients"
+        android:layout_toRightOf="@+id/lstIngredients"
+        android:layout_toEndOf="@+id/lstIngredients" />
+
+    <ListView
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:id="@+id/lstIngredients"
+        android:layout_marginLeft="33dp"
+        android:scrollbars="vertical"
+        android:clickable="false"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/txtTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="90dp"
+        android:text="Procedimiento"
+        android:id="@+id/txtProc"
+        android:textColor="#000000"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignLeft="@+id/lstIngredients"
+        android:layout_alignStart="@+id/lstIngredients"
+        android:layout_marginTop="28dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preparación"
+        android:id="@+id/textView6"
+        android:textColor="#000000"
+        android:layout_below="@+id/lstIngredients"
+        android:layout_alignLeft="@+id/txtProc"
+        android:layout_alignStart="@+id/txtProc" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBar"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="21dp"/>
+
+</RelativeLayout>
